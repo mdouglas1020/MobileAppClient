@@ -1,0 +1,26 @@
+<ion-header>
+    <ion-navbar>
+        <button ion-button menuToggle>
+            <ion-icon name="menu"></ion-icon>
+        </button>
+        <ion-title>Orders</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content bg-color="red">
+    <ion-list>
+        <ion-card *ngFor="let order of orders" bg-color="pink">
+            <ion-card-content>
+                <ion-card-title>
+                    Order number: {{order.order_num}}
+                </ion-card-title>
+                <hr />
+                <h4>Order date: {{order.date}}</h4>
+                <h4>Order group: {{order.order_group}}</h4>
+                <h4>Product(s): {{order.fk_product}}</h4>
+                <h4>Order quantity: {{order.quantity}}</h4>
+                <button type="button" ion-button round item-end id="delete_btn" (click)="deleteOrder(order)">Delete</button>
+            </ion-card-content>
+        </ion-card>
+    </ion-list>
+</ion-content>

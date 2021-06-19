@@ -1,0 +1,51 @@
+<ion-header>
+	<ion-navbar>
+		<ion-title>Register</ion-title>
+	</ion-navbar>
+</ion-header>
+
+<ion-content bg-color="maroon">
+	<form (ngSubmit)="attemptRegistration()">
+
+		<!-- Card for text inputs -->
+		<ion-card class="input-card">
+			<ion-card-content>
+				<ion-grid>
+					<ion-row>
+						<ion-col>
+							<ion-item class="home-input">
+								<ion-input type="text" placeholder="Username" [(ngModel)]="usrnm" name="usrnm"></ion-input>
+							</ion-item>
+							<ion-item class="home-input">
+								<ion-input type="text" placeholder="Email" [(ngModel)]="email" name="email"></ion-input>
+							</ion-item>
+							<ion-item class="home-input">
+								<ion-input type="password" placeholder="Password" [(ngModel)]="psswd" name="psswd"></ion-input>
+							</ion-item>
+							<ion-item class="home-input">
+								<ion-input type="password" placeholder="Confirm Password" [(ngModel)]="cnfrm" name="cnfrm"></ion-input>
+							</ion-item>
+						</ion-col>
+					</ion-row>
+				</ion-grid>
+			</ion-card-content>
+		</ion-card>
+
+		<!-- Card for cancel and confirm buttons -->
+		<ion-card class="input-card">
+			<ion-card-content>
+				<ion-grid>
+					<ion-row>
+						<ion-col>
+							<button type="submit" ion-button round item-start id="confirm_btn">Confirm</button>
+						</ion-col>
+						<ion-col>
+							<button type="button" ion-button round item-end id="cancel_btn" (click)="dismiss()">Cancel</button>
+						</ion-col>
+					</ion-row>
+				</ion-grid>
+			</ion-card-content>
+		</ion-card>
+		
+	</form>	
+</ion-content>

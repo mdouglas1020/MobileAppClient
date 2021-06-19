@@ -1,0 +1,59 @@
+// http://ionicframework.com/docs/theming/
+
+
+// App Global Sass
+// --------------------------------------------------
+// Put style rules here that you want to apply globally. These
+// styles are for the entire app and not just one component.
+// Additionally, this file can be also used as an entry point
+// to import other Sass files to be included in the output CSS.
+//
+// Shared Sass variables, which can be used to adjust Ionic's
+// default Sass variables, belong in "theme/variables.scss".
+//
+// To declare rules for a specific mode, create a child rule
+// for the .md, .ios, or .wp mode classes. The mode class is
+// automatically applied to the <body> element in the app.
+[ bg-color="lred" ] {
+	background-color: #76272D;
+}
+
+#logout_btn {
+	background-color: color( $colors, register-btn, base );
+	color           : color( $colors, register-btn, contrast );
+	border-radius   : 6px;
+	width           : 100%;
+	//border          : 1px solid color( $colors, register-btn, contrast );
+	//box-shadow      : inset 0 0 4px color( $colors, register-btn, contrast );
+	font-family     : map-get( $fonts, helv );
+	height          : 30px;
+}
+
+.menu-item {
+	background-color: #5E2A2E;
+	color: #F3D9D9;
+	font-family: map-get( $fonts, helv );
+}
+
+.toolbar-background {
+	background-color: color( $colors, nav-bar, base );
+}
+
+.toolbar-title {
+	color: color( $colors, nav-bar, contrast );
+	font-family: map-get( $fonts, helv );
+}
+
+.bar-button-default {
+	color: color( $colors, register-btn, base );
+}
+
+.list-ios .item-block .item-inner {
+	border-width: 1px;
+	border-color: color( $colors, nav-bar, base );
+}
+
+.list-ios > .item-block:last-child, .list-ios > .item-wrapper:last-child .item-block {
+	border-width: 1px;
+	border-color: color( $colors, nav-bar, base );
+}

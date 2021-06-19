@@ -1,0 +1,64 @@
+page-register {
+	[ bg-color="maroon" ] {
+		background-color: color( $colors, maroon );
+	}
+
+	.card-content {
+		padding: 0;
+	}
+
+	.home-input {
+		background-color: color( $colors, pink-maroon );
+		margin          : 5px 0px;
+		border-radius   : 6px;
+		padding         : 3px;
+		font-size       : 1.5em;
+		//border          : 1px solid color( $colors, pink-red );
+		//box-shadow      : inset 0 0 4px color( $colors, pink-red );
+		text-indent     : 10px;
+		color           : color( $colors, dark-maroon );
+		font-family     : map-get( $fonts, helv );
+	}
+
+	.input-card {
+		background-color: color( $colors, red-maroon );
+		text-align      : center;
+		padding         : 2px 5px;
+		border-radius   : 4px;
+		margin-top      : 20px;
+		//border          : 2px solid color( $colors, dark-maroon );
+		//box-shadow      : inset 0 0 4px color( $colors, dark-maroon );
+	}
+
+	#confirm_btn {
+		background-color: color( $colors, register-btn, base );
+		color           : color( $colors, register-btn, contrast );
+		border-radius   : 6px;
+		width           : 100%;
+		//border          : 1px solid color( $colors, register-btn, contrast );
+		//box-shadow      : inset 0 0 4px color( $colors, register-btn, contrast );
+		font-family     : map-get( $fonts, helv );
+	}
+
+	#cancel_btn {
+		background-color: color( $colors, cancel-btn, base );
+		color           : color( $colors, cancel-btn, contrast );
+		border-radius   : 6px;
+		width           : 100%;
+		//border          : 1px solid color( $colors, cancel-btn, contrast );
+		//box-shadow      : inset 0 0 4px color( $colors, cancel-btn, contrast );
+		font-family     : map-get( $fonts, helv );
+	}
+
+	.text-input::-moz-placeholder {
+	  	color: color( $colors, light-pink-red );
+	}
+
+	.text-input:-ms-input-placeholder {
+	  	color: color( $colors, light-pink-red );
+	}
+
+	.text-input::-webkit-input-placeholder {
+	  	color: color( $colors, light-pink-red );
+	}
+}

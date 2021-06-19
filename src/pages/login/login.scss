@@ -1,0 +1,86 @@
+page-login {
+	[ bg-color="red" ] {
+		background-color: color( $colors, maroon );
+	}
+
+	.login-input {
+		background-color: color( $colors, pink-maroon );
+		margin          : 5px 0px;
+		border-radius   : 6px;
+		padding         : 3px;
+		font-size       : 1.5em;
+		//border          : 1px solid color( $colors, pink-red );
+		//box-shadow      : inset 0 0 4px color( $colors, pink-red );
+		text-indent     : 10px;
+		color           : color( $colors, dark-maroon );
+		font-family     : map-get( $fonts, helv );
+	}
+
+	[ img-size="logo" ] {
+		width     : 80%;
+		margin: 20% 0;
+	}
+
+	[ h-align="center" ] {
+		text-align: center;
+	}
+
+	.card-content {
+		padding: 0;
+	}
+
+	.input-card {
+		background-color: color( $colors, red-maroon );
+		text-align      : center;
+		padding         : 2px 5px;
+		border-radius   : 4px;
+		margin-top      : 20px;
+		//border          : 2px solid color( $colors, dark-maroon );
+		//box-shadow      : inset 0 0 4px color( $colors, dark-maroon );
+	}
+
+	#login_btn {
+		background-color: color( $colors, login-btn, base );
+		color           : color( $colors, login-btn, contrast );
+		border-radius   : 6px;
+		width           : 100%;
+		//border          : 1px solid color( $colors, login-btn, contrast );
+		//box-shadow      : inset 0 0 4px color( $colors, login-btn, contrast );
+		font-family     : map-get( $fonts, helv );
+	}
+
+	#register_btn {
+		background-color: color( $colors, register-btn, base );
+		color           : color( $colors, register-btn, contrast );
+		border-radius   : 6px;
+		width           : 100%;
+		//border          : 1px solid color( $colors, register-btn, contrast );
+		//box-shadow      : inset 0 0 4px color( $colors, register-btn, contrast );
+		font-family     : map-get( $fonts, helv );
+	}
+
+	.text-input::-moz-placeholder {
+	  	color: color( $colors, light-pink-red );
+	}
+
+	.text-input:-ms-input-placeholder {
+	  	color: color( $colors, light-pink-red );
+	}
+
+	.text-input::-webkit-input-placeholder {
+	  	color: color( $colors, light-pink-red );
+	}
+
+	.toolbar-background {
+  		background-color: color( $colors, nav-bar, base );
+	}
+
+	.toolbar-title {
+		color: color( $colors, nav-bar, contrast );
+		font-family: map-get( $fonts, helv );
+	}
+
+	.bar-button-default {
+		color: color( $colors, register-btn, base );
+	}
+}

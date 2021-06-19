@@ -1,0 +1,29 @@
+page-cart {
+    [ bg-color="red" ] {
+		background-color: color( $colors, maroon );
+	}
+
+    [ bg-color="pink" ] {
+		background-color: color( $colors, nav-bar, contrast );
+	}
+
+    #add-btn {
+		background-color: color( $colors, login-btn, base );
+        height: 80%;
+	}
+
+    #sub-btn {
+		background-color: color( $colors, cancel-btn, base );
+        height: 80%;
+	}
+
+    .cart-btn {
+		background-color: color( $colors, register-btn, base );
+		color           : color( $colors, register-btn, contrast );
+		border-radius   : 6px;
+		width           : 100%;
+		//border          : 1px solid color( $colors, register-btn, contrast );
+		//box-shadow      : inset 0 0 4px color( $colors, register-btn, contrast );
+		font-family     : map-get( $fonts, helv );
+	}
+}

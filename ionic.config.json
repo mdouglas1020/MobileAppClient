@@ -1,0 +1,8 @@
+{
+  "name": "WholesomeSweets",
+  "app_id": "3fc58928",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  }
+}

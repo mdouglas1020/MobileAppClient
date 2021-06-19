@@ -1,0 +1,46 @@
+<ion-header>
+    <ion-navbar>
+        <button ion-button menuToggle>
+            <ion-icon name="menu"></ion-icon>
+        </button>
+        <ion-title>Home</ion-title>
+        <ion-buttons end>
+            <button ion-button (click)="loadCartView()">
+                <ion-icon name="md-cart" clear></ion-icon>
+                <ion-badge>{{cart_quantity}}</ion-badge>
+            </button>
+        </ion-buttons>
+    </ion-navbar>
+</ion-header>
+
+<ion-content bg-color="red">
+    <ion-card bg-color="pink" *ngFor="let item of inventory">
+        <img src={{item.path_to_picture}} />
+        <ion-card-content>
+            <ion-card-title card-title>
+                {{item.product}} - $ {{item.price}}
+            </ion-card-title>
+            <p card-description>
+                {{item.description}}
+            </p>
+            <hr>
+            <ion-grid card-buttons>
+                <ion-row>
+                    <ion-col>
+                        <button ion-button id="add-btn" (click)="bumpCounter( item )">
+                            <ion-icon name="md-add-circle"></ion-icon>
+                        </button>
+                    </ion-col>
+                    <ion-col>
+                        <strong quantity>{{item.count}}</strong>
+                    </ion-col>
+                    <ion-col>
+                        <button ion-button id="sub-btn" (click)="decrCounter( item )">
+                            <ion-icon name="md-remove-circle"></ion-icon>
+                        </button>
+                    </ion-col>
+                </ion-row>
+            </ion-grid>
+        </ion-card-content>
+    </ion-card>
+</ion-content>

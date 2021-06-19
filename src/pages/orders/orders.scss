@@ -1,0 +1,10 @@
+page-orders {
+    //background-color: color( $colors, maroon );
+    [ bg-color="red" ] {
+		background-color: color( $colors, maroon );
+	}
+
+    [ bg-color="pink" ] {
+		background-color: color( $colors, nav-bar, contrast );
+	}
+}

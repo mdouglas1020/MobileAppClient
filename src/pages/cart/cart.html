@@ -1,0 +1,58 @@
+<ion-header>
+    <ion-navbar>
+        <button ion-button menuToggle>
+            <ion-icon name="menu"></ion-icon>
+        </button>
+        <ion-title>Cart</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content bg-color="red">
+    <ion-list>
+        <ion-item *ngFor="let item of cart" bg-color="pink">
+            <ion-thumbnail item-start>
+                <img src={{item.pic}} />
+            </ion-thumbnail>
+            <h2>{{item.product}} (x{{item.count}})</h2>
+            <p>$ {{item.price * item.count}}</p>
+            <button ion-button id="add-btn" item-end (click)="bumpCounter(item)">
+                <ion-icon name="md-add-circle"></ion-icon>
+            </button>
+            <button ion-button id="sub-btn" item-end (click)="decrCounter(item)">
+                <ion-icon name="md-remove-circle"></ion-icon>
+            </button>
+        </ion-item>
+    </ion-list>
+
+    <!-- Card for showing the user their total and the confirm button -->
+    <ion-card bg-color="pink" *ngIf="say_hide_confirm">
+        <ion-card-content>
+            <h2>User: {{active_user}}</h2>
+            <h2>Total: $ {{cart_price}}</h2>
+            <hr>
+            <button ion-button class="cart-btn" (click)="submitOrder('-1',0)">Confirm</button>
+        </ion-card-content>
+    </ion-card>
+
+    <!-- Card for showing the user their order number after confirming their purchase and showing the orders button -->
+    <ion-card bg-color="pink" *ngIf="say_hide_order">
+        <ion-card-content>
+            <h2>Your order group: {{order_num}}</h2>
+            <div *ngFor="let item of ordered_items">
+                <h3>{{item.product}} (x{{item.quantity}})</h3>
+            </div>
+            <hr>
+            <button ion-button class="cart-btn" (click)="goToOrders()">Go to your orders</button>
+        </ion-card-content>
+    </ion-card>
+
+    <!-- Card for showing the user that their cart is empty and showing the home button -->
+    <ion-card bg-color="pink" *ngIf="say_hide_empty">
+        <ion-card-content>
+            <h2>Looks like your carts empty!</h2>
+            <hr>
+            <button ion-button class="cart-btn" (click)="goToHome()">Continue shopping</button>
+        </ion-card-content>
+    </ion-card>
+
+</ion-content>
